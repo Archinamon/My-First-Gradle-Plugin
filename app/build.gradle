@@ -2,6 +2,9 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+import ru.yandex.example.gradle.ReportPlugin
+apply plugin: ReportPlugin
+
 android {
     compileSdkVersion 27
     defaultConfig {
