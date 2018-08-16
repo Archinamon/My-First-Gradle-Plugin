@@ -1,4 +1,11 @@
 package ru.yandex.example.gradle
 
-class ReportDSL {
+open class ReportDSL {
+
+    open var shouldSend: Boolean = false
+    open var report: String = ""
+
+    fun transform(str: String) {
+        //todo
+    }
 }

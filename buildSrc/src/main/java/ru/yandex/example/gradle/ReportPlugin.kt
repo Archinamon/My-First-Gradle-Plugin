@@ -9,14 +9,11 @@ class ReportPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
         project.logger.error("Wow! Our custom plugin configured!")
+        val settings = project.extensions.create("report", ReportDSL::class.java)
 
-        val preBuildReport by project.tasks.creating {
-            doFirst {
-                logger.error("This task launch!")
-            }
-
-            doLast {
-                logger.error("This task finished!")
+        project.afterEvaluate {
+            if (settings.shouldSend) {
+                project.task("sendReport")
             }
         }
     }
