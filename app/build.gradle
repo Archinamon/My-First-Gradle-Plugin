@@ -8,6 +8,7 @@ apply plugin: ReportPlugin
 report {
     shouldSend = true
     report = "My custom plugin report works!"
+    chatId = "-1"
 
     transform(report)
 }

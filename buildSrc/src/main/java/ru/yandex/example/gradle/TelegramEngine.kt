@@ -1,6 +1,18 @@
 package ru.yandex.example.gradle
 
-class TelegramEngine(private val token: String) {
+import retrofit.Endpoints
+import retrofit.RestAdapter
+import retrofit.client.OkClient
+
+class TelegramEngine(
+        private val token: String
+) {
+
+    private val engine = RestAdapter.Builder()
+            .setLogLevel(RestAdapter.LogLevel.FULL)
+            .setClient(OkClient())
+            .setEndpoint(Endpoints.newFixedEndpoint(API_HOST))
+            .build()
 
     private fun cleanup(report: String) = report.replace(UNDERSCORE_SYMBOL, DASH_SYMBOL)
 
