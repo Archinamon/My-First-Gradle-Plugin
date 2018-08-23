@@ -6,6 +6,7 @@ import ru.yandex.example.gradle.ReportPlugin
 apply plugin: ReportPlugin
 
 report {
+    token = "%my_secure_tg_token"
     shouldSend = true
     report = "My custom plugin report works!"
     chatId = "-1"

@@ -13,7 +13,7 @@ class TelegramEngine(
     private val engine = RestAdapter.Builder()
             .setEndpoint(Endpoints.newFixedEndpoint(API_HOST.format(token)))
             .setLogLevel(RestAdapter.LogLevel.FULL)
-            .setClient(OkClient())
+//            .setClient(OkClient())
             .build()
             .create(TelegramAPI::class.java)
 

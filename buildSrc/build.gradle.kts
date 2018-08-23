@@ -25,6 +25,7 @@ repositories {
 
 dependencies {
     val kotlin_version = "1.2.51"
+    compile("com.squareup.okhttp3:okhttp:3.6.0")
     compile("com.squareup.retrofit:retrofit:1.9.0")
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version")
     compileOnly("com.android.tools.build:gradle:3.1.4")
